@@ -1,0 +1,11 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.form-container {
+	display: grid;
+	gap: 16px;
+	padding: 8px;
+}

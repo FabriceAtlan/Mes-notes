@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cours BEM CSS</title>
+</head>
+<body>
+
+  <h1>Cours sur la méthodologie BEM CSS</h1>
+
+  <div class="section">
+    <h2 class="section__title">1. Pourquoi utiliser BEM ?</h2>
+    <div class="section__content">
+      <p>
+        BEM (Block, Element, Modifier) facilite la gestion du CSS pour des projets de grande envergure en apportant une structure claire.
+      </p>
+      <ul>
+        <li><strong>Clarté</strong> : Les noms de classes décrivent leur rôle dans l'interface.</li>
+        <li><strong>Modularité</strong> : Les composants sont facilement réutilisables.</li>
+        <li><strong>Scalabilité</strong> : Le CSS reste maintenable même pour des interfaces complexes.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2 class="section__title">2. Les principes de BEM</h2>
+    <div class="section__content">
+      <p>La méthodologie BEM repose sur trois concepts principaux :</p>
+      <ul>
+        <li><span class="block">Block</span> (Bloc) : Un composant indépendant de l'interface.</li>
+        <li><span class="element">Element</span> (Élément) : Une partie d'un bloc qui a une fonction spécifique.</li>
+        <li><span class="modifier">Modifier</span> (Modificateur) : Une variation d'un bloc ou d'un élément.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2 class="section__title">3. Syntaxe de base</h2>
+    <div class="section__content">
+      <p>Voici la structure de base de BEM :</p>
+      <div class="section__code">
+        <code>
+.block {}
+.block__element {}
+.block--modifier {}
+.block__element--modifier {}
+        </code>
+      </div>
+      <p>Exemple d'un bouton avec un icône :</p>
+      <div class="section__code">
+        <code>
+&lt;button class="button button--primary"&gt;
+  &lt;span class="button__icon"&gt;&lt;/span&gt;
+  &lt;span class="button__text"&gt;Click Me&lt;/span&gt;
+&lt;/button&gt;
+        </code>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2 class="section__title">4. Exemple détaillé</h2>
+    <div class="section__content">
+      <p>Exemple complet d'une carte avec HTML et CSS :</p>
+
+      <h3>HTML :</h3>
+      <div class="section__code">
+        <code>
+&lt;div class="card card--featured"&gt;
+  &lt;h2 class="card__title"&gt;Titre de la carte&lt;/h2&gt;
+  &lt;p class="card__description"&gt;Description de la carte.&lt;/p&gt;
+  &lt;button class="card__button card__button--large"&gt;En savoir plus&lt;/button&gt;
+&lt;/div&gt;
+        </code>
+      </div>
+
+      <h3>CSS :</h3>
+      <div class="section__code">
+        <code>
+/* Block */
+.card {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 20px;
+}
+
+/* Element */
+.card__title {
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.card__description {
+  font-size: 1rem;
+  color: #666;
+}
+
+/* Modifier */
+.card--featured {
+  background-color: #f9f9f9;
+  border-color: #ff5722;
+}
+
+.card__button {
+  padding: 10px 15px;
+  background-color: #2196f3;
+  color: white;
+}
+
+.card__button--large {
+  padding: 15px 25px;
+}
+        </code>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2 class="section__title">5. BEM et les préprocesseurs CSS</h2>
+    <div class="section__content">
+      <p>
+        BEM s'intègre bien avec les préprocesseurs CSS comme Sass. Exemple avec Sass :
+      </p>
+      <div class="section__code">
+        <code>
+.card {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 20px;
+
+  &__title {
+    font-size: 1.5rem;
+    color: #333;
+  }
+
+  &__description {
+    font-size: 1rem;
+    color: #666;
+  }
+
+  &--featured {
+    background-color: #f9f9f9;
+    border-color: #ff5722;
+  }
+
+  &__button {
+    padding: 10px 15px;
+    background-color: #2196f3;
+    color: white;
+
+    &--large {
+      padding: 15px 25px;
+    }
+  }
+}
+        </code>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2 class="section__title">6. Conclusion</h2>
+    <div class="section__content">
+      <p>
+        BEM est une méthode efficace pour organiser votre CSS en blocs, éléments et modificateurs, rendant le code plus clair et plus facile à maintenir.
+      </p>
+      <ul>
+        <li><strong>Block</strong> : Le composant principal.</li>
+        <li><strong>Element</strong> : Une partie spécifique du composant.</li>
+        <li><strong>Modifier</strong> : Une variation du composant ou d’un élément.</li>
+      </ul>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,19 @@
+# Git branch
+
+## Sommaire
+
+- [Créer une branch](#créer-une-branch)
+
+### Créer une branch [^](#sommaire)
+
+Créer une nouvelle branche localement
+git branch nom-de-la-branche
+
+Basculer sur la nouvelle branche
+git checkout nom-de-la-branche
+
+combiner ces deux étapes avec une seule commande
+git checkout -b nom-de-la-branche
+
+La commande git switch -c est une alternative plus récente à git checkout -b. Elle permet de créer une nouvelle branche et de basculer dessus en une seule commande.
+git switch -c nom-de-la-branche
