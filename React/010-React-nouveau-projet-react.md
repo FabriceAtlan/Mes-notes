@@ -16,11 +16,9 @@
 
 - [Installation de `react-router-dom`](#installation-de-react-router-dom)
 
-- [Modification de `main.tsx`](#modification-de-maintsx)
-
 - [Imbrication des routes](#imbrication-des-routes)
 
-- [Créer un point d'ancrage dans le `DOM`](#créer-un-point-dancrage-dans-le-dom)
+- [Modification de `main.tsx`](#modification-de-maintsx)
 
 - [Navigation interne](#navigation-interne)
 
@@ -66,23 +64,6 @@ Le package `react-router-dom` doit être présent dans le fichier `package.json`
   },
 ```
 
-### Modification de `main.tsx` [^](#sommaire)
-
-Configurer `main.tsx` afin d'importer les et de créer les routes :
-
-```javascript
-// main.tsx
-
-import { createRoot } from 'react-dom/client'
-import { RouterProvider } from 'react-router-dom'
-
-import router from './router.tsx';
-
-createRoot(document.getElementById('root')!).render(
-  <RouterProvider router={router}/>
-)
-```
-
 ### Imbrication des routes [^](#sommaire)
 
 Créer le fichier `router.tsx` :
@@ -114,9 +95,24 @@ const router = createBrowserRouter([
 export default router;
 ```
 
-### Créer un point d'ancrage dans le `DOM` [^](#sommaire)
+### Modification de `main.tsx` [^](#sommaire)
 
-Utilisation de la fonction `createRoot` dans le fichier `main.tsx` pour créer un **point d’ancrage** dans le **DOM** où notre **application React** sera **rendue**.
+Configurer `main.tsx` afin d'importer et de créer les routes :
+
+```javascript
+// main.tsx
+
+import { createRoot } from 'react-dom/client'
+import { RouterProvider } from 'react-router-dom'
+
+import router from './router.tsx';
+
+createRoot(document.getElementById('root')!).render(
+  <RouterProvider router={router}/>
+)
+```
+
+L'utilisation de la fonction `createRoot` dans le fichier `main.tsx` permet de créer un **point d’ancrage** dans le **DOM** où notre **application React** sera **rendue**.
 
 Nous remplaçons l’utilisation du composant `App` par un `RouterProvider`, en passant notre instance de routeur en tant que propriété :
 
@@ -130,7 +126,7 @@ createRoot(document.getElementById('root')!).render(
 
 ### Navigation interne [^](#sommaire)
 
-Créez **2 fichiers** : `Home.tsx` et `About.tsx`
+Créez **2 fichiers** à titre d'exemple : `Home.tsx` et `About.tsx`
 
 ```javascript
 // Home.tsx
@@ -156,18 +152,27 @@ function About () {
 export default About;
 ```
 
-Pour la **navigation interne**, il faut utiliser `<Link/>`.
+Pour la **navigation interne**, il faut utiliser `<Link/>` ou `NavLink`.
+
+Différence entre `Link` et `NavLink` :
+
+`Link`
+
+- **Utilisation principale :** `Link` est utilisé pour naviguer entre les pages ou les composants dans une application React **sans recharger la page**.
+
+`NavLink`
+
+- **Utilisation principale :** `NavLink` est une extension de `Link` qui offre des fonctionnalités supplémentaires pour gérer l'**état actif** d'un lien.
+Il ajoute automatiquement une classe CSS ou un style aux liens correspondant à la route active.
 
 Priviligiez la balise `<a>` pour les **redirections externes**.
 
-Modification de `App.tsx` :
+Exemple avec `Link` :
 
 ```javascript
-// App.tsx
-
 import { Link } from 'react-router-dom';
 
-function App() {
+function Header() {
   return (
     <>
       <nav>
@@ -179,7 +184,22 @@ function App() {
 }
 ```
 
-À ce stade, le navigateur ne mettra pas à jour l'affichage, mais l'url de la page changera en cliquant sur **Home** ou **About**.
+Exemple avec `NavLink` :
+
+```javascript
+import { NavLink } from 'react-router-dom';
+
+function Header() {
+  return (
+    <>
+      <nav>
+        <NavLink to={"/"}>Home</NavLink>
+        <NavLink to={"about"}>About</NavLink>
+      </nav>
+    </>
+  )
+}
+```
 
 ### Mise à jour de la page avec `Outlet` [^](#sommaire)
 
