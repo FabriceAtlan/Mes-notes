@@ -1,54 +1,28 @@
-# React | Création d'un projet React
+# React | React router dom
 
 ## Sommaire
 
-- [Initialisation d'une application React avec Vite](#initialisation-dune-application-react-avec-vite)
-
-  - [Skipper l'étape du choix](#skipper-létape-du-choix)
-
-- [Se placer dans le dossier de l'application](#se-placer-dans-le-dossier-de-lapplication)
-
-- [Installation des dépendances](#installation-des-dépendances)
-
-- [Lancement de l'application React en mode développement](#lancement-de-lapplication-react-en-mode-développement)
-
-- [Documentation React router](#documentation-react-router)
+- [Introduction](#introduction)
 
 - [Installation de `react-router-dom`](#installation-de-react-router-dom)
 
+- [Configuration de base](#configuration-de-base)
+
 - [Imbrication des routes](#imbrication-des-routes)
 
-- [Modification de `main.tsx`](#modification-de-maintsx)
+- [Injecter RouterProvider](#injecter-routerprovider)
 
 - [Navigation interne](#navigation-interne)
 
 - [Mise à jour de la page avec `Outlet`](#mise-à-jour-de-la-page-avec-outlet)
 
-### Initialisation d'une application React avec Vite [^](#sommaire)
+### Introduction [^](#sommaire)
+---
 
-- `npm create vite@latest nom_de_mon_application`
-
-#### Skipper l'étape du choix [^](#sommaire)
-
-- `npm create vite@latest nom_de_mon_application -- --template react-ts`
-
-### Se placer dans le dossier de l'application [^](#sommaire)
-
-- `cd nom_de_mon_application`
-
-### Installation des dépendances [^](#sommaire)
-
-- `npm install`
-
-### Lancement de l'application React en mode développement [^](#sommaire)
-
-- `npm run dev`
-
-### Documentation React router [^](#sommaire)
-
-**Documentation - [React router](https://reactrouter.com/en/main)**
+`react-router-dom` est une **bibliothèque** permettant de gérer la **navigation** dans une application **React monopage (SPA)**. Elle utilise le concept de routes pour afficher différents composants en fonction de l'URL.
 
 ### Installation de `react-router-dom` [^](#sommaire)
+---
 
 ```powershell
 npm install react-router-dom
@@ -64,7 +38,23 @@ Le package `react-router-dom` doit être présent dans le fichier `package.json`
   },
 ```
 
+### Configuration de base [^](#sommaire)
+---
+
+**Exemple d'arborescence de projet :**
+
+```bash
+src/
+├── components/
+│   ├── Home.tsx
+│   ├── About.tsx
+│   ├── Contact.tsx
+├── App.tsx
+├── main.tsx
+```
+
 ### Imbrication des routes [^](#sommaire)
+---
 
 Créer le fichier `router.tsx` :
 
@@ -95,7 +85,8 @@ const router = createBrowserRouter([
 export default router;
 ```
 
-### Modification de `main.tsx` [^](#sommaire)
+### Injecter `RouterProvider` [^](#sommaire)
+---
 
 Configurer `main.tsx` afin d'importer et de créer les routes :
 
@@ -125,6 +116,7 @@ createRoot(document.getElementById('root')!).render(
 ```
 
 ### Navigation interne [^](#sommaire)
+---
 
 Créez **2 fichiers** à titre d'exemple : `Home.tsx` et `About.tsx`
 
@@ -202,6 +194,7 @@ function Header() {
 ```
 
 ### Mise à jour de la page avec `Outlet` [^](#sommaire)
+---
 
 Au lieu de spécifier explicitement quel composant doit être affiché dans `<main>`, nous pouvons utiliser un outil très pratique de **React Router** : `<Outlet />`.
 
@@ -222,5 +215,7 @@ function App() {
   )
 }
 ```
+
+---
 
 [Retour au sommaire](#sommaire)
