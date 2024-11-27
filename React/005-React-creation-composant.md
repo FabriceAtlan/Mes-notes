@@ -53,3 +53,8 @@ Pouvoir utiliser un composant, il faut l'importer comme suit :
 ```powershell
 import nom_du_composant from "chemin_du_composant";
 ```
+
+---
+
+[Retour au sommaire](#sommaire)
+
