@@ -1,4 +1,4 @@
-# Cours synthétique sur `JSON.stringify`
+# `JSON.stringify`
 
 ## Sommaire
 
