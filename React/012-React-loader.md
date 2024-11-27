@@ -1,4 +1,4 @@
-# Cours synthétique sur les loaders dans React Router
+# React | `loaders`
 
 ## Sommaire
 
