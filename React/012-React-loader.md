@@ -1,8 +1,14 @@
 # React | `loaders`
 
+---
+
 ## Sommaire
 
+---
+
 ## 1. Qu'est-ce qu'un loader ?
+
+---
 
 Un `loader` est une fonction utilisée dans **React Router** pour :
 
