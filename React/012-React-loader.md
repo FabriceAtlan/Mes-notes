@@ -1,10 +1,13 @@
 # React | `loaders`
+
 ---
 
 ## Sommaire
+
 ---
 
 ## 1. Qu'est-ce qu'un loader ?
+
 ---
 
 Un `loader` est une fonction utilisée dans **React Router** pour :
@@ -16,6 +19,8 @@ Un `loader` est une fonction utilisée dans **React Router** pour :
 ---
 
 ## 2. Comment définir un loader ?
+
+---
 
 Un `loader` est défini dans l'objet `loader` d'une **route**.
 
@@ -38,6 +43,8 @@ const router = createBrowserRouter([
 
 ## 3. Récupérer les données dans le composant
 
+---
+
 Les données chargées par le `loader` sont accessibles via le hook `useLoaderData`.
 
 ```tsx
@@ -53,6 +60,8 @@ const Home = () => {
 ---
 
 ## 4. Gestion des erreurs
+
+---
 
 Si le `loader` échoue (par exemple, une requête API retourne une erreur), une route peut définir un `errorElement` pour afficher une interface dédiée.
 
@@ -74,6 +83,8 @@ const router = createBrowserRouter([
 ---
 
 ## 5. Exemple complet avec sous-routes
+
+---
 
 Les `loaders` peuvent être utilisés sur des sous-routes.
 
@@ -104,6 +115,8 @@ const router = createBrowserRouter([
 
 ### Récupération des données dans les sous-routes
 
+---
+
 ```tsx
 const ArtistDetail = () => {
   const artist = useLoaderData();
@@ -115,6 +128,8 @@ const ArtistDetail = () => {
 ---
 
 ## 6. Paramètres dynamiques dans les loaders
+
+---
 
 Les paramètres d'URL `params` sont automatiquement passés au `loader`, permettant de charger des données spécifiques.
 
@@ -129,6 +144,8 @@ const loader = async ({ params }) => {
 ---
 
 ## 7. Combinaison avec `useNavigate`
+
+---
 
 Un `loader` peut être associé à une navigation dynamique, pour recharger les données lorsque l'URL change.
 
@@ -149,6 +166,8 @@ const AlbumList = () => {
 
 ## 8. Résumé des étapes
 
+---
+
 1. **Définir le loader** dans la route.
 
 2. **Charger les données** via une requête asynchrone.
@@ -158,5 +177,7 @@ const AlbumList = () => {
 4. **Gérer les erreurs** avec un `errorElement`.
 
 Les `loaders` garantissent que vos données sont disponibles avant de rendre les composants, améliorant ainsi l'expérience utilisateur.
+
+---
 
 [Retour au sommaire](#sommaire)
