@@ -30,8 +30,6 @@ Elle est utile pour :
 JSON.stringify(value, replacer, space);
 ```
 
----
-
 ### Paramètres :
 
 ---
