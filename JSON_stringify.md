@@ -1,8 +1,14 @@
 # `JSON.stringify`
 
+---
+
 ## Sommaire
 
+---
+
 ### 1. Définition
+
+---
 
 `JSON.stringify()` est une méthode JavaScript qui convertit une **valeur JavaScript** (objet, tableau, ou variable simple) en une **chaîne JSON**.
 
@@ -18,11 +24,17 @@ Elle est utile pour :
 
 ### 2. Syntaxe
 
+---
+
 ```javascript
 JSON.stringify(value, replacer, space);
 ```
 
+---
+
 ### Paramètres :
+
+---
 
 1. **`value`** : La valeur à convertir (objet, tableau, etc.).
 
@@ -42,6 +54,8 @@ JSON.stringify(value, replacer, space);
 
 ## 3. Exemples
 
+---
+
 ### Exemple basique
 
 ```javascript
@@ -52,6 +66,8 @@ console.log(jsonString);
 ```
 
 ### Avec une mise en forme lisible
+
+---
 
 L'argument `space` ajoute une indentation :
 
@@ -65,6 +81,8 @@ console.log(jsonString);
 }
 ```
 
+---
+
 ### Avec un `replacer` (filtrage des propriétés)
 
 ```javascript
@@ -75,6 +93,8 @@ console.log(jsonString);
 ```
 
 ### Ignorer les valeurs circulaires
+
+---
 
 Un objet contenant une référence circulaire provoque une erreur :
 
@@ -88,6 +108,8 @@ JSON.stringify(obj); // Erreur : Converting circular structure to JSON
 ---
 
 ## 4. Cas d'utilisation
+
+---
 
 1. **API et transmission des données** :
 
@@ -123,5 +145,7 @@ JSON.stringify(obj); // Erreur : Converting circular structure to JSON
 | **Attention**          | Les références circulaires provoquent une erreur.                        |
 
 `JSON.stringify` est essentiel pour travailler avec des données au format JSON dans les applications modernes.
+
+---
 
 [Retour au sommaire](#sommaire)
