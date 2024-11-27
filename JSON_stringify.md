@@ -83,6 +83,8 @@ console.log(jsonString);
 
 ### Avec un `replacer` (filtrage des propriétés)
 
+---
+
 ```javascript
 const data = { name: "Alice", age: 25, city: "Paris" };
 const jsonString = JSON.stringify(data, ["name", "city"]);
