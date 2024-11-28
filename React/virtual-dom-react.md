@@ -77,6 +77,7 @@ document.getElementById('button').innerText = 'Cliquez ici';
 // Avec React et le Virtual DOM
 const Button = () => <button>Cliquez ici</button>;
 ReactDOM.render(<Button />, document.getElementById('root'));
+```
 
 Avec le Virtual DOM, la manipulation du DOM réel est gérée automatiquement, en ne mettant à jour que l’élément nécessaire (le texte du bouton).
 
