@@ -77,3 +77,17 @@ document.getElementById('button').innerText = 'Cliquez ici';
 // Avec React et le Virtual DOM
 const Button = () => <button>Cliquez ici</button>;
 ReactDOM.render(<Button />, document.getElementById('root'));
+
+Avec le Virtual DOM, la manipulation du DOM réel est gérée automatiquement, en ne mettant à jour que l’élément nécessaire (le texte du bouton).
+
+
+---
+
+Conclusion ^
+
+Le Virtual DOM est une innovation clé dans les bibliothèques modernes comme React. Il permet de concilier performances et simplicité de développement, en déléguant la gestion complexe des mises à jour DOM au moteur de React. Il est particulièrement efficace pour des interfaces complexes avec de nombreuses interactions.
+
+
+---
+
+[Retour au sommaire](#sommaire)
