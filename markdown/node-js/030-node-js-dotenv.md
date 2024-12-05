@@ -1,44 +1,40 @@
-# Node.js | Paramétrer une application avec dotenv
+# Node.js | `.env` et `dotenv`
 
 ## Sommaire
 
-- [Le module dotenv](#le-module-dotenv)
+- [Installation de `dotenv`](#)
+- [Créer le fichier `.env`](#)
 
 - [Ne publie jamais d'informations sensibles !](#ne-publie-jamais-dinformations-sensibles)
 
-### Le module dotenv [^](#sommaire)
+### Installation de dotenv [^](#sommaire)
 
-Utilisez le paquer `dotenv` pour définir les variables d'environnement lors du lancement de l'application.
+Le package dotenv est une bibliothèque Node.js qui permet de gérer facilement les variables d'environnement dans vos applications. Il est principalement utilisé pour charger les variables définies dans un fichier .env et les rendre accessibles dans l'objet global process.env.
 
-**Pour installer ce dernier :** `npm install dotenv`
+Cela est particulièrement utile pour stocker des informations sensibles comme des clés d'API, des chaînes de connexion à une base de données ou des configurations spécifiques à un environnement (développement, production, etc.).
 
-Ce module permets de définir des variables dans un fichier spécial `.env` stocké à la racine du projet.
+Installez le paquet `dotenv` pour définir les variables d'environnement de l'application :
 
-Les **paramètres d'environnement** stockés dans un fichier `.env` doivent être importé comme çà : `import "dotenv/config";`.
+`npm install dotenv`
 
-**Exemple :**
+#### Pourquoi utiliser dotenv ?
 
-```powershell
-# .env file
-SERVER_PORT=5000
-DB_USER=toto
-DB_PASSWORD=Ftst453sf2jerfh
-SECRET_API_KEY=YGFftyftyfy4565VHCFTD!!YFT
-```
+1. Sécurité : Les informations sensibles ne sont pas directement dans le code source.
+2. Flexibilité : Les configurations changent en fonction de l'environnement (local, test, production).
+3. Simplicité : Pas besoin de définir manuellement les variables d'environnement dans chaque machine ou serveur.
 
-**Au lieu de faire...**
+### Créer le fichier `.env` [^](#sommaire)
 
-```powershell
-SERVER_PORT=5000 DB_USER=toto DB_PASSWORD=Ftst453sf2jerfh SECRET_API_KEY=YGFftyftyfy4565VHCFTD!!YFT node server.js
-```
+1. dotenv lit un fichier .env (contenant des paires clé-valeur) à la racine de votre projet.
+2. Il charge ces paires clé-valeur dans process.env.
+3. Vous pouvez ensuite accéder à ces variables dans votre code via process.env.
 
-**Faire ça pour lancer le serveur...**
+Le fichier .env contient les variables au format clé-valeur :
 
-```powershell
-node server.js
-```
-
-...et les variables seront chargées à partir du fichier `.env`.
+API_KEY=12345abcdef
+DB_HOST=localhost
+DB_USER=root
+DB_PASS=securepassword
 
 ### Ne publie jamais d'informations sensibles ! [^](#sommaire)
 
