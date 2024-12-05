@@ -2,16 +2,18 @@
 
 ## Sommaire
 
-- [Installation de `dotenv`](#)
-- [Créer le fichier `.env`](#)
+- [`dotenv`](#)
+- [`.env`](#)
+- [Importation de `dotenv`](#)
+- [`process.env](#)
 
-- [Ne publie jamais d'informations sensibles !](#ne-publie-jamais-dinformations-sensibles)
+- [Ne jamais publier d'informations sensibles !](#)
 
-### Installation de dotenv [^](#sommaire)
+### `dotenv` [^](#sommaire)
 
-Le package dotenv est une bibliothèque Node.js qui permet de gérer facilement les variables d'environnement dans vos applications. Il est principalement utilisé pour charger les variables définies dans un fichier .env et les rendre accessibles dans l'objet global process.env.
+Le package `dotenv` est une bibliothèque `Node.js` qui permet de gérer facilement les variables d'environnement dans une application. Il est principalement utilisé pour charger les variables définies dans un fichier `.env` et les rendre accessibles dans l'objet global `process.env`.
 
-Cela est particulièrement utile pour stocker des informations sensibles comme des clés d'API, des chaînes de connexion à une base de données ou des configurations spécifiques à un environnement (développement, production, etc.).
+Cela est particulièrement utile pour stocker des informations sensibles comme des clés d'**API**, des chaînes de connexion à une base de données ou des configurations spécifiques à un environnement (développement, production, etc.).
 
 Installez le paquet `dotenv` pour définir les variables d'environnement de l'application :
 
@@ -19,30 +21,49 @@ Installez le paquet `dotenv` pour définir les variables d'environnement de l'ap
 
 #### Pourquoi utiliser dotenv ?
 
-1. Sécurité : Les informations sensibles ne sont pas directement dans le code source.
-2. Flexibilité : Les configurations changent en fonction de l'environnement (local, test, production).
-3. Simplicité : Pas besoin de définir manuellement les variables d'environnement dans chaque machine ou serveur.
+1. **Sécurité :** Les informations sensibles ne sont pas directement dans le code source.
+2. **Flexibilité :** Les configurations changent en fonction de l'environnement (local, test, production).
+3. **Simplicité :** Pas besoin de définir manuellement les variables d'environnement dans chaque machine ou serveur.
 
-### Créer le fichier `.env` [^](#sommaire)
+### `.env` [^](#sommaire)
 
-1. dotenv lit un fichier .env (contenant des paires clé-valeur) à la racine de votre projet.
-2. Il charge ces paires clé-valeur dans process.env.
-3. Vous pouvez ensuite accéder à ces variables dans votre code via process.env.
+1. `dotenv` lit un fichier `.env` (contenant des paires **clé-valeur**) à la racine du projet.
+2. Il charge ces paires **clé-valeur** dans `process.env`.
+3. il est ensuite possible d'accéder à ces variables dans le code via `process.env`.
 
-Le fichier .env contient les variables au format clé-valeur :
+Le fichier `.env` contient les variables au format **clé-valeur** :
 
+**Exemple :**
+
+```javascript
 API_KEY=12345abcdef
 DB_HOST=localhost
 DB_USER=root
 DB_PASS=securepassword
+```
 
-### Ne publie jamais d'informations sensibles ! [^](#sommaire)
+**Création du fichier `.env` :**
+
+`touch .env`
+
+Ajoutez les variables d'environnements nécessaires.
+
+### Importation de `dotenv` [^](#sommaire)
+
+```javascript
+import "dotenv/config";
+```
+
+### `process.env` [^](#sommaire)
+
+Les variables sont ensuite accessibles dans l'application, via `process.env.KEY`.
+
+### Ne jamais publier d'informations sensibles ! [^](#sommaire)
 
 Le fichier `.env` doit **TOUJOURS** être ajouté dans le fichier `.gitignore` afin de ne pas partager des données sensibles via un dépôt public.
 
 ```powershell
-# .gitignore
-node_modules/
+// .gitignore
 .env
 ```
 
