@@ -2,6 +2,7 @@
 
 ## Sommaire
 
+- [Objectif]()
 - [Exécution de `create vite@latest`]()
 - [Déplacement dans le dossier du projet]()
 - [Installation des dépendances]()
@@ -10,6 +11,15 @@
 - [Manipulation de l'icône du site]()
 - [Suppression du contenu de App.css]()
 - [Suppression du contenu de index.css]()
+
+## Objectif [^](#sommaire)
+
+Création d'un package npm permettant de configurer un projet React personnalisé de la façon suivante :
+- Projet React TypeScript
+- Installer react-router-dom
+- Nettoyer le projet du contenu inutile
+- Création des dossiers components, Pages, types, styles, utils
+- Implémentation du router dans le projet
 
 ### Exécution de `create vite@latest` [^](#sommaire)
 
