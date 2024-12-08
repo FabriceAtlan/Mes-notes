@@ -3,6 +3,7 @@
 ## Sommaire
 
 - [Objectif]()
+- [Création du dossier de travail]()
 - [Exécution de `create vite@latest`]()
 - [Déplacement dans le dossier du projet]()
 - [Installation des dépendances]()
@@ -20,6 +21,14 @@ Création d'un package npm permettant de configurer un projet React personnalis�
 - Nettoyer le projet du contenu inutile
 - Création des dossiers components, Pages, types, styles, utils
 - Implémentation du router dans le projet
+
+### Création du dossier de travail [^](#sommaire)
+
+Opérations préliminaire avant de programmer le package npm :
+- Création du dossier
+- Initialisation du package.json
+- Ajouter le type module au package.json
+- Création du fichier js
 
 ### Exécution de `create vite@latest` [^](#sommaire)
 
