@@ -3,8 +3,8 @@
 ## Sommaire
 
 - [Ressources](#)
- - [GODOT](#)
- - [GDQuest-demos](#)
+  - [GODOT](#)
+  - [GDQuest-demos](#)
 - [Création d'un nouveau projet](#)
 
 ### Ressources [^](#sommaire)
