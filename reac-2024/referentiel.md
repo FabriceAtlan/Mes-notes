@@ -25,6 +25,7 @@ Il travaille dans le respect :
 
 - de la réglementation,
 - des procédures qualité de l'entreprise et du dossier de conception,
-- de la sécurité des sites et des applications, et des principes de l'éco-conception.
+- de la sécurité des sites et des applications,
+- des principes de l'éco-conception.
 
 [Retour au sommaire](#sommaire)
