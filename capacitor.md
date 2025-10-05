@@ -37,3 +37,26 @@ npm i -D @capacitor/cli
 Lors de l'initialisation, Capacitor posera quelques questions pour configurer le projet.  Utiliser le questionnaire CLI :
 
 `npx cap init`
+
+Il créera le fichier de configuration incluant le dossier de sortie du projet :
+
+- `www` pour Angular
+- `build` pour React
+- `public` pour Vue
+
+### Créer une application IO et Android
+
+`npm i @capacitor/android @capacitor/ios`
+
+Une fois les plateformes ajoutées  au `package.json`, les projets peuvent être installés avec les commandes suivantes :
+
+```bash
+npx cap add android
+npx cap add ios
+```
+
+### Synchroniser l'application web
+
+Synchroniser l'application web et installer les dépendances du projet :
+
+`npx cap sync`
