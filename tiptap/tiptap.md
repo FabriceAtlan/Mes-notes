@@ -213,11 +213,11 @@ const editor = useEditor({
 })
 ```
 
-### History [^](#sommaire)
+## History [^](#sommaire)
 
 Permet l’undo / redo.
 
-## Commande d'installation [^](#sommaire)
+### Commande d'installation [^](#sommaire)
 
 ```bash
 npm install @tiptap/extension-history
