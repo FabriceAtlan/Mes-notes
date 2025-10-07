@@ -67,7 +67,8 @@ const editor = useEditor({
 
 ```javascript
 StarterKit.configure({
-  codeBlock: false,
+  heading: {levels: [1, 2, 3, 4]}, // seul h1 à h4 seront pris en compte
+  codeBlock: false, // désactive les blocs de code
 })
 ```
 
