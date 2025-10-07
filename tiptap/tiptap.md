@@ -7,11 +7,24 @@
   - [Commande d'installation](#commande-dinstallation)
   - [Exemple](#exemple)
   - [Astuces](#astuces)
-- [Installer extension-placeholder](#installer-extension-placeholder)
-  - [Commande d'installation](#commande-dinstallation)
+- [Extension-placeholder](#extension-placeholder)
+  - [Commande d'installation](#commande-dinstallation-1)
   - [Exemple](#exemple-1)
   - [Exemple avec style](#exemple-avec-style)
   - [Astuces](#astuces-1)
+- [Link](#link)
+  - [Commande d'installation](#commande-dinstallation-2)
+  - [Exemple](#exemple-2)
+  - [TextAlign](#textalign)
+  - [Exemple](#exemple-3)
+- [Underline / Strike / Highlight](#underline--strike--highlight)
+  - [Commandes d'installation](#commande-dinstallation-3)
+    - [Underline](#underline)
+    - [Strike](#strike)
+    - [Highlight](#highlight)
+  - [Exemple](#exemple-4)
+- [History](#history)
+  - [Exemple](#exemple-5)
 
 ## Tiptap [^](#sommaire)
 
@@ -57,7 +70,7 @@ StarterKit.configure({
 })
 ```
 
-## Installer extension-placeholder [^](#sommaire)
+## Extension-placeholder [^](#sommaire)
 
 Permet d’afficher un texte indicatif quand le contenu de l’éditeur est vide, un peu comme l’attribut `placeholder` d’un `<input>` ou `<textarea>` classique
 
@@ -117,6 +130,109 @@ Placeholder.configure({
 | `emptyNodeClass`       | Classe CSS ajoutée aux nœuds vides pour permettre du style spécifique.                                                            |
 | `showOnlyWhenEditable` | Si `true`, le placeholder n’apparaît que si l’éditeur est éditable.                                                               |
 | `includeChildren`      | Si `true`, le placeholder est visible même si l’éditeur contient des enfants vides (utile pour les nodes imbriqués).              |
+```
+
+## Link [^](#sommaire)
+
+Permet d’insérer des liens cliquables.
+
+### Commande d'installation [^](#sommaire)
+
+```bash
+npm install @tiptap/extension-link
+```
+
+### Exemple [^](#sommaire)
+
+```javascript
+import Link from '@tiptap/extension-link'
+
+Link.configure({
+  openOnClick: true, // ouvre le lien dans un nouvel onglet
+  linkOnPaste: true, // transforme automatiquement les URL collées en lien
+})
+```
+
+## TextAlign [^](#sommaire)
+
+Gérer l’alignement du texte (gauche, centre, droite, justifié).
+
+```bash
+@tiptap/extension-text-align
+```
+
+### Exemple [^](#sommaire)
+
+```javascript
+import TextAlign from '@tiptap/extension-text-align'
+
+TextAlign.configure({
+  types: ['heading', 'paragraph'], // sur quels types de nœuds appliquer l'alignement
+})
+```
+
+## Underline / Strike / Highlight [^](#sommaire)
+
+Ajouter des formats de texte supplémentaires : souligné, barré, surligné.
+
+### Commande d'installation [^](#sommaire)
+
+#### Underline [^](#sommaire)
+
+```bash
+npm install @tiptap/extension-underline
+```
+
+#### Strike [^](#sommaire)
+
+```bash
+npm install @tiptap/extension-strike
+```
+
+#### Highlight [^](#sommaire)
+
+```bash
+npm install @tiptap/extension-highlight
+```
+
+### Exemple [^](#sommaire)
+
+```javascript
+import Underline from '@tiptap/extension-underline'
+import Strike from '@tiptap/extension-strike'
+import Highlight from '@tiptap/extension-highlight'
+
+const editor = useEditor({
+  extensions: [
+    StarterKit,
+    Underline,
+    Strike,
+    Highlight,
+  ],
+})
+```
+
+### History [^](#sommaire)
+
+Permet l’undo / redo.
+
+## Commande d'installation [^](#sommaire)
+
+```bash
+npm install @tiptap/extension-history
+```
+
+### Exemple [^](#sommaire)
+
+```javascript
+import History from '@tiptap/extension-history'
+
+const editor = useEditor({
+  extensions: [
+    StarterKit,
+    History, // active undo/redo
+  ],
+})
 ```
 
 [Retour au sommaire](#sommaire)
