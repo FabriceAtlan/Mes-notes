@@ -12,7 +12,7 @@
   - [Exemple](#exemple-1)
   - [Exemple avec style](#exemple-avec-style)
   - [Astuces](#astuces-1)
-- [Link](#link)
+- [Link](#link-)
   - [Commande d'installation](#commande-dinstallation-2)
   - [Exemple](#exemple-2)
   - [TextAlign](#textalign)
