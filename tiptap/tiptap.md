@@ -219,8 +219,6 @@ Permet l’undo / redo.
 
 ## Commande d'installation [^](#sommaire)
 
-### Commandes d'installation [^](#sommaire)
-
 ```bash
 npm install @tiptap/extension-history
 ```
