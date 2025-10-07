@@ -18,12 +18,13 @@
   - [TextAlign](#textalign-)
   - [Exemple](#exemple--3)
 - [Underline / Strike / Highlight](#underline--strike--highlight-)
-  - [Commandes d'installation](#commande-dinstallation--3)
+  - [Commande d'installation](#commande-dinstallation--3)
     - [Underline](#underline-)
     - [Strike](#strike-)
     - [Highlight](#highlight-)
   - [Exemple](#exemple--4)
 - [History](#history-)
+  - [Commande d'installation](#commande-dinstallation--4)
   - [Exemple](#exemple--5)
 
 ## Tiptap [^](#sommaire)
@@ -217,6 +218,8 @@ const editor = useEditor({
 Permet l’undo / redo.
 
 ## Commande d'installation [^](#sommaire)
+
+### Commandes d'installation [^](#sommaire)
 
 ```bash
 npm install @tiptap/extension-history
