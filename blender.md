@@ -3,19 +3,19 @@
 # Manipulation de base
 
 ### Move
-Déplacer de manière globale `g`
+- Déplacer de manière globale `g`
 
-Déplacement sur un axe `g + x/y/z`
+- Déplacement sur un axe `g + x/y/z`
 
 ### Rotate
-Rotation de manière globale`r`
+- Rotation de manière globale`r`
 
-Rotation sur un axe `g + x/y/z`
+- Rotation sur un axe `g + x/y/z`
 
 ### Scale
-Modifier l'échelle de manière globale`s`
+- Modifier l'échelle de manière globale`s`
 
-Modifier l'échelle sur un axe `g + x/y/z`
+- Modifier l'échelle sur un axe `g + x/y/z`
 
 ## Dupliquer
 
